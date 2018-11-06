@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.developnerz.moviisky"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildTypes.each {
+        it.buildConfigField 'String', 'TMDB_API_KEY', TMDB_API_KEY
+    }
+
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Android Support Libraries
+    implementation "com.android.support:appcompat-v7:$rootProject.androidSupportLibraryVersion"
+    implementation "com.android.support:exifinterface:$rootProject.androidSupportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.androidSupportLibraryVersion"
+    implementation "com.android.support:support-vector-drawable:$rootProject.androidSupportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.androidSupportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.androidSupportLibraryVersion"
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.androidConstraintLayoutVersion"
+
+    //Testing
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.runnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+
+    //ButterKnife
+    implementation "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
+
+    //Dagger 2
+    implementation "com.google.dagger:dagger:$rootProject.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    //Retrofit Gson Converter
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$rootProject.piccassoVersion"
+    implementation 'com.android.support:design:27.1.1'
+
+    //SearchView
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.developnerz.moviisky">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission
+        android:name="com.developnerz.moviisky.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.developnerz.moviisky.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/moviisky_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/moviisky_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".modules.splashscreen.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".modules.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".modules.search.SearchActivity"
+            android:label="@string/search_movie"
+            android:parentActivityName=".modules.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".modules.moviedetail.MovieDetailActivity"
+            android:label="@string/movie_detail"
+            android:parentActivityName=".modules.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".modules.about.AboutActivity"
+            android:label="@string/about_MoviiSky"
+            android:parentActivityName=".modules.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".modules.setting.SettingActivity"
+            android:label="@string/setting"
+            android:parentActivityName=".modules.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".modules.favorite.FavoriteActivity"
+            android:label="Added to Favorite"
+            android:parentActivityName=".modules.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <provider
+            android:name=".provider.FavProvider"
+            android:authorities="com.developnerz.moviisky"
+            android:exported="true"
+            android:readPermission="com.developnerz.moviisky.READ_DATABASE"
+            android:writePermission="com.developnerz.moviisky.WRITE_DATABASE" />
+
+        <receiver
+            android:name=".utils.alarm.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".widget.MoviiSkyWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.developnerz.moviisky.ACTION_MOVIISKYDB_UPDATED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/movii_sky_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>

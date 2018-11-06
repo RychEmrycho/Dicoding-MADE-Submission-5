@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MoviiSky</string>
+    <string name="title_activity_settings">Pengaturan</string>
+
+    <string name="navigation_drawer_open">Buka Navigasi Drawer</string>
+    <string name="navigation_drawer_close">Tutup Navigasi Drawer</string>
+    <string name="nav_header_desc">Header Navigasi</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="movies_around_you_search_movie_n_is_getting_easier">Film di sekitarmu | Mencari Film \n jadi lebih mudah</string>
+    <string name="search_movie">Cari Film</string>
+    <string name="movie_detail">Detail Film</string>
+    <string name="about_MoviiSky">Tentang MoviiSky</string>
+    <string name="setting">Pengaturan</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="title_search_greeting">Di sini, Anda dapat menemukan film yang paling Anda suka!</string>
+    <string name="message_search_greeting">Tip: Masukkan judul yang relevan untuk mendapatkan hasil yang tepat. Selamat mencari! : D</string>
+    <string name="title_search_no_connection">Upps, tidak ada item untuk ditampilkan …</string>
+    <string name="message_search_no_connection">Perhaps, nothing match your criteria or we already lost connection.  Tip: Please check your search query or your internet connection.</string>
+    <string name="hint_search">Cari Film</string>
+    <string name="result_search">Result for:</string>
+    <string name="title_search_no_internet">Upps, tidak ada koneksi internet …</string>
+    <string name="message_search_no_internet">Tip: Silakan periksa koneksi internet Anda.</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="press_back_to_exit">Tekan KEMBALI lagi untuk keluar</string>
+    <string name="something_wrong">Ada yang salah</string>
+    <string name="message_now_playing_greeting">Di sini, Anda dapat melihat film yang diputar di bioskop.</string>
+    <string name="message_top_rated_greeting">Di sini, Anda dapat menemukan Film Teratas yang disediakan oleh TMDb.</string>
+    <string name="message_upcoming_greeting">Di sini, Anda dapat menemukan Film Mendatang di bioskop.</string>
+    <string name="discover">Temukan</string>
+    <string name="search">Cari</string>
+    <string name="more">Lebih Banyak</string>
+    <string name="about">Tentang</string>
+
+</resources>

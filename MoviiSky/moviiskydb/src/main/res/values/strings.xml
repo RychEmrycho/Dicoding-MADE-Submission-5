@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MoviiSky DB Fav</string>
+    <string name="upps_no_item_to_show">Upps, no item to show...</string>
+    <string name="you_have_not_added_any_movies">You haven\'t added any movies to favorites. You can add it from Movie Detail in MoviiSky App.</string>
+    <string name="title">Title:</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="overview">Overview:</string>
+    <string name="description">Description</string>
+    <string name="language">Language:</string>
+    <string name="movie_language">Movie Language</string>
+    <string name="vote_average">Vote Average:</string>
+    <string name="vote_average_value">Vote Average Value</string>
+    <string name="popularity">Popularity:</string>
+    <string name="popularity_value">Popularity Value</string>
+    <string name="adult_category">Adult Category:</string>
+    <string name="adult_category_value">Adult Category Value</string>
+    <string name="release_date">Release Date:</string>
+    <string name="release_date_value">Release Date Value</string>
+
+</resources>
